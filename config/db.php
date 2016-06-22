@@ -13,5 +13,5 @@
  */
 define("DB_HOST", "127.0.0.1");
 define("DB_NAME", "login");
-define("DB_USER", "partier");
-define("DB_PASS", "!1newmedia");
+define("DB_USER", "your username");
+define("DB_PASS", "your password");
