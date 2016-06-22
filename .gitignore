@@ -19,5 +19,5 @@ bin-release/
 # information for Eclipse / Flash Builder.
 *db.php
 *redisconfig.php
-html/config/db.php
-2fa/examples/simple/redisconfig.php
+*/html/config/db.php
+*/html/2fa/examples/simple/redisconfig.php
