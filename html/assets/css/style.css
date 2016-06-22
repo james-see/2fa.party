@@ -109,4 +109,9 @@ input[type=submit] {
 	display: inline-block;
 	align:center;
 }
+.texter {
+	float:left;
+	-webkit-appearance: none;
+}
+
 }
