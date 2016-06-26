@@ -3,6 +3,13 @@
 <head>
 	<link REL=StyleSheet HREF="assets/css/style.css" TYPE="text/css" MEDIA=screen>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+	<link rel="apple-touch-icon" href="assets/img/apple-touch-icon-precomposed.png" />
+	<link rel="apple-touch-startup-image" href="assets/img/aaple-touch-startup-image.png" />
+	<meta name="apple-mobile-web-app-title" content="2FA Party"> <!-- iOS -->
+	<meta name="application-name" content="2FA Party"> <!-- android -->
+	<LINK REL=StyleSheet HREF="assets/css/style.css" TYPE="text/css" MEDIA=screen>
+	<script>(function(a,b,c){if(c in b&&b[c]){var d,e=a.location,f=/^(a|html)$/i;a.addEventListener("click",function(a){d=a.target;while(!f.test(d.nodeName))d=d.parentNode;"href"in d&&(d.href.indexOf("http")||~d.href.indexOf(e.host))&&(a.preventDefault(),e.href=d.href)},!1)}})(document,window.navigator,"standalone")</script>
 </head>
 <body>
 	<div>

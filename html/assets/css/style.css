@@ -1,16 +1,107 @@
 /* nice colors */
-/* .blue 0055a0 red #f00013 yellow yellow green lime another blue #001637 */
+/* .blue 0055a0 red #f00013 yellow yellow green lime another blue #001637 orange #ffae1e yellow #fbef3e */
 body {
 	font-family: "Lucida Console", Monaco, monospace;
 	margin: 0 auto;
 	font-size: 16px;
 }
 
+@-webkit-keyframes change-color {
+  0%   { background-color: white; }
+  50% { background-color: red; }
+  100% {color: white; background-color:white;}
+}
+@-moz-keyframes change-color {
+  0%   { background-color: white; }
+  50% { background-color: red; }
+  100% {color: white; background-color:white;}
+}
+@-o-keyframes change-color {
+  0%   { background-color: white; }
+  50% { background-color: red; }
+  100% {color: white; background-color:white;}
+}
+@keyframes change-color {
+  0%   { background-color: white; }
+  50% { background-color: red; }
+  100% {color: white; background-color:white;}
+}
+
+@-webkit-keyframes wipeme {
+  0%   { visibility:visible; }
+  100% { visibility: hidden; }
+}
+@-moz-keyframes wipeme {
+  0%   { visibility:visible; }
+  100% { visibility: hidden; }
+  }
+@-o-keyframes wipeme {
+  0%   { visibility:visible; }
+  100% { visibility: hidden; }
+}
+@keyframes wipeme {
+  0%   { visibility:visible; }
+  100% { visibility: hidden; }
+}
+
+.fader2 {
+	color: red;
+width:70%; 
+    margin-left:15%; 
+    margin-right:15%;
+}
+#td1 {
+	animation:         change-color 10.0s ease-in-out 0s forwards;
+}
+#td2 {
+	animation:         change-color 9.0s ease-in-out 0s forwards;
+}
+#td3 {
+	animation:         change-color 8.0s ease-in-out 0s forwards;
+}
+#td4 {
+	animation:         change-color 7.0s ease-in-out 0s forwards;
+}
+#td5 {
+	animation:         change-color 6.0s ease-in-out 0s forwards;
+}
+#td6 {
+	animation:         change-color 5.0s ease-in-out 0s forwards;
+}
+#td7 {
+	animation:         change-color 4.0s ease-in-out 0s forwards;
+}
+#td8 {
+	animation:         change-color 3.0s ease-in-out 0s forwards;
+}
+#td9 {
+	animation:         change-color 2.0s ease-in-out 0s forwards;
+}
+#td10 {
+	animation:         change-color 1.0s ease-in-out 0s forwards;
+}
+
+.fader2 {
+	animation: wipeme 10.0s ease-in-out 0s forwards;
+}
+
+a {
+    text-decoration: none;
+	background-color: #FFAE1E;
+	padding: 2px 1px;
+	margin: 2px;
+	color: #001637;
+}
+
 h1.titler {
-	font-size: 1.8rem;
-	background-color: yellow;
-	padding: 4px 12px;
+	font-size: 1.7rem;
+	background-color: #fbef3e;
+	padding: 8px 12px;
 	width: auto;
+	color: #0055a0;
+	font-family: "Courier New", "Lucida Console", Monaco, monospace;
+	text-align: center;
+	margin-bottom: 30px;
 }
 
 .center {
@@ -21,8 +112,30 @@ h1.titler {
 }
 
 .serious {
-	background-color: #F00013;
-	color: #fffaff;
+	position: relative;
+	background-color: #F4F4F4;
+	color: black;
+	top: 20px;
+	padding: 5px;
+	border-radius: 12px 2px;
+	border: 2px solid #ffaE1E; 
+	margin:10px;
+}
+
+.generate {
+	border-radius: 5px 15px;
+	border: 2px solid #0055a0;
+	background-color: #F4F4F4;
+	padding: 20px 4px;
+	vertical-align: center;
+	display: block;
+	margin-left: 10px;
+	margin-right: 10px;
+	left: 50%;
+	text-align: center;
+	font-size: 1.5rem;
+	font-family: sans-serif;
+	margin-top: 20px;
 }
 
 .blue {
@@ -47,13 +160,6 @@ p {
 	padding: 2px 6px;
 }
 
-a {
-    text-decoration: none;
-	background-color: lime;
-	padding: 2px 1px;
-	margin: 2px;
-	color: #001637;
-}
 /* buttons */
 
 input[type=submit] {
@@ -82,36 +188,147 @@ ul, li {
 	    -webkit-appearance: none;
    -moz-appearance: none;
    appearance: none;
-   font-size: 1.2rem;
+   font-size: 1rem;
+   font-family: "Helvetica Neue","Helvetica","Arial",sans-serif;
+   display: inline-block;
+   width: 60%;
+   margin:8px 0;
 }
+
+/* where generated code disappears after 10 seconds */
+#hideMe {
+	-webkit-transition-timing-function: linear;
+	transition-timing-function: linear;
+	background-color: #f4f4f4;
+    -moz-animation: cssAnimation 0s linear 10s forwards;
+    /* Firefox */
+    -webkit-animation: cssAnimation 0s linear 10s forwards;
+    /* Safari and Chrome */
+    -o-animation: cssAnimation 0s linear 10s forwards;
+    /* Opera */
+    animation: cssAnimation 0s linear 10s forwards;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+#ider {
+	font-family: sans-serif;
+	color: #f00013;
+	font-size:2.2rem;
+	letter-spacing: 0.1em;
+	display: block;
+	margin-left: 0;
+	margin-right: 0;
+	text-align: center;
+}
+
+#ider a {
+	color: red;
+	background-color: #fff1ff;
+}
+
+.registerform {
+	margin:0;
+}
+
+
+#copier {
+	border: none;
+	background-color: yellow;
+	border-radius: 0;
+}
+@keyframes cssAnimation {
+	from {
+    width:auto;
+    height:auto;
+    overflow:auto;
+  }
+    to {
+        width:0;
+        height:0;
+        overflow:hidden;
+    }
+}
+@-webkit-keyframes cssAnimation {
+		from {
+    width:auto;
+    height:auto;
+    visibility:visible;
+  }
+    to {
+        width:0;
+        height:0;
+        visibility:hidden;
+
+    }
+}
+
+
 @media only screen and (max-device-width: 480px) {
 body {
 	width:auto;
 }
+
+div {
+	margin: 0;
+}
+
+.titler {
+	margin-top: 0;
+	padding: 2px 8px;
+}
+
  form {
- 	max-width: 400px;
+ 	max-width: 90%;
+ 	margin:0;
+ 	margin-left:35px;
  	width: auto;
- 	align: center;
  }
  p {
-	 margin: 10px 5px;
+	 margin: 15px 5px;
  }
- div {
-	 margin: 10px;
- }
+ 
  .login_input {
 	    -webkit-appearance: none;
    -moz-appearance: none;
    appearance: none;
    font-size: 1.2rem;
+   width: 80%;
+   font-family: "Lucida Console", "Consolas", monospace;
  }
 input[type=submit] {
 	display: inline-block;
-	align:center;
+	margin-left: 0;
+	margin-right: 0;
+	width: 80%;
+	margin-left: 0;
+ margin-right: 50%;
+ margin-top: 10px;
 }
+
+.registerform {
+	margin-left: 0;
+	width:90%;
+}
+
+.registersubmit {
+	left: 10%;
+	margin-top: -10px;
+}
+
 .texter {
 	float:left;
 	-webkit-appearance: none;
+}
+
+.center {
+	padding:10px;
+	margin:10px;
+}
+.fader2 {
+	width: 100%;
+	overflow: auto;
+	margin-left:0;
 }
 
 }

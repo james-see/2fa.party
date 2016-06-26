@@ -3,6 +3,45 @@
 <head>
 	<link REL=StyleSheet HREF="assets/css/style.css" TYPE="text/css" MEDIA=screen>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" href="assets/img/2fa.ico" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+	<link rel="apple-touch-icon" href="assets/img/apple-touch-icon-precomposed.png" />
+	<link rel="apple-touch-startup-image" href="assets/img/aaple-touch-startup-image.png" />
+	<meta name="apple-mobile-web-app-title" content="2FA Party"> <!-- iOS -->
+	<meta name="application-name" content="2FA Party"> <!-- android -->
+	<meta name="format-detection" content="telephone=no">
+	<LINK REL=StyleSheet HREF="assets/css/style.css" TYPE="text/css" MEDIA=screen>
+	<script>
+		  function copyToClipboard(text) {
+		    window.prompt("Copy to clipboard: Ctrl+C, Enter", text);
+		  }
+	</script>
+	<script type="text/javascript">
+		(function(document,navigator,standalone) {
+			// prevents links from apps from oppening in mobile safari
+			// this javascript must be the first script in your <head>
+			if ((standalone in navigator) && navigator[standalone]) {
+				var curnode, location=document.location, stop=/^(a|html)$/i;
+				document.addEventListener('click', function(e) {
+					curnode=e.target;
+					while (!(stop).test(curnode.nodeName)) {
+						curnode=curnode.parentNode;
+					}
+					// Condidions to do this only on links to your own app
+					// if you want all links, use if('href' in curnode) instead.
+					if(
+						'href' in curnode && // is a link
+						(chref=curnode.href).replace(location.href,'').indexOf('#') && // is not an anchor
+						(	!(/^[a-z\+\.\-]+:/i).test(chref) ||                       // either does not have a proper scheme (relative links)
+							chref.indexOf(location.protocol+'//'+location.host)===0 ) // or is in the same protocol and domain
+					) {
+						e.preventDefault();
+						location.href = curnode.href;
+					}
+				},false);
+			}
+		})(document,window.navigator,'standalone');
+	</script>
 </head>
 <body>
 	<div>
@@ -10,7 +49,22 @@
 <?php include('2fa/pgp-2fa.php');
 $pgp = new pgp_2fa();
 $pgp->generateSecret();
-echo "<p>your key generated is: <br><br><br><b>".$_SESSION['insecure_code']."</b><br><br><br> copy it and paste it into your login form!</p>
+echo "<div id='hideMe'><span id='ider'>".$_SESSION['insecure_code']."</span>"; ?>
+<button id="copier" onclick="copyToClipboard(document.getElementById('ider').innerHTML)">Copy code</button><?php echo"</div>";?>
+<table class="fader2" cellpadding="10" cellspacing="2">
+<tr>
+<td id='td10'>10</td>
+<td id='td9'>9</td>
+<td id='td8'>8</td>
+<td id='td7'>7</td>
+<td id='td6'>6</td>
+<td id='td5'>5</td>
+<td id='td4'>4</td>
+<td id='td3'>3</td>
+<td id='td2'>2</td>
+<td id='td1'>1</td>
+</tr>
+</table><?php echo "
 <p>make sure to keep it safe, as it is not hashed or encrypted at the moment.</p>
 <p>Don't have our js in your login form yet? copy the code from <a href='logincode.php'>here</a></p>";
 echo "<p>You may want to <a href='settings.php'/>setup your pgp public key</a> to secure this key against intruders and ensure your no one can break in.";
