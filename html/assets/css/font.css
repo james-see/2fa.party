@@ -1,0 +1,48 @@
+@font-face {
+  font-family: 'InputMono';
+  src: url('InputMono-Bold.eot'); /* IE9 Compat Modes */
+  src: url('InputMono-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('InputMono-Bold.woff') format('woff'), /* Modern Browsers */
+       url('InputMono-Bold.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('InputMono-Bold.svg#8a9868ef88ca3c3538aa18acafcc1dd3') format('svg'); /* Legacy iOS */
+       
+  font-style:   normal;
+  font-weight:  700;
+}
+
+@font-face {
+  font-family: 'InputMono';
+  src: url('InputMono-Regular.eot'); /* IE9 Compat Modes */
+  src: url('InputMono-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('InputMono-Regular.woff') format('woff'), /* Modern Browsers */
+       url('InputMono-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('InputMono-Regular.svg#841331703feb203407d2b481eb322210') format('svg'); /* Legacy iOS */
+       
+  font-style:   normal;
+  font-weight:  400;
+}
+
+@font-face {
+  font-family: 'InputMonoCondensed';
+  src: url('InputMonoCondensed-Bold.eot'); /* IE9 Compat Modes */
+  src: url('InputMonoCondensed-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('InputMonoCondensed-Bold.woff') format('woff'), /* Modern Browsers */
+       url('InputMonoCondensed-Bold.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('InputMonoCondensed-Bold.svg#8bb19a20cd78d28fdddaa444908ca9ec') format('svg'); /* Legacy iOS */
+       
+  font-style:   normal;
+  font-weight:  700;
+}
+
+@font-face {
+  font-family: 'InputMonoCondensed';
+  src: url('InputMonoCondensed-Regular.eot'); /* IE9 Compat Modes */
+  src: url('InputMonoCondensed-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('InputMonoCondensed-Regular.woff') format('woff'), /* Modern Browsers */
+       url('InputMonoCondensed-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('InputMonoCondensed-Regular.svg#3c71373c29c34b262f3abeefd182cb8a') format('svg'); /* Legacy iOS */
+       
+  font-style:   normal;
+  font-weight:  400;
+}
+

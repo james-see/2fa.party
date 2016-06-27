@@ -18,6 +18,7 @@ if (isset($login)) {
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="apple-mobile-web-app-capable" content="yes" />
 	<link rel="icon" href="assets/img/2fa.ico" />
+	 <link rel="stylesheet" type="text/css" href="assets/css/font.css">
 	<link rel="apple-touch-icon" href="assets/img/apple-touch-icon-precomposed.png" />
 	<link rel="apple-touch-startup-image" href="assets/img/aaple-touch-startup-image.png" />
 	<meta name="apple-mobile-web-app-title" content="2FA Party"> <!-- iOS -->

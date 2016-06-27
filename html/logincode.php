@@ -3,6 +3,7 @@
 <head>
 	<link REL=StyleSheet HREF="assets/css/style.css" TYPE="text/css" MEDIA=screen>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="assets/css/font.css">
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 	<link rel="apple-touch-icon" href="assets/img/apple-touch-icon-precomposed.png" />
 	<link rel="apple-touch-startup-image" href="assets/img/aaple-touch-startup-image.png" />

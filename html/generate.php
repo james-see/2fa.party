@@ -3,6 +3,7 @@
 <head>
 	<link REL=StyleSheet HREF="assets/css/style.css" TYPE="text/css" MEDIA=screen>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="assets/css/font.css">
 	<link rel="icon" href="assets/img/2fa.ico" />
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 	<link rel="apple-touch-icon" href="assets/img/apple-touch-icon-precomposed.png" />
@@ -50,7 +51,7 @@
 $pgp = new pgp_2fa();
 $pgp->generateSecret();
 echo "<div id='hideMe'><span id='ider'>".$_SESSION['insecure_code']."</span>"; ?>
-<button id="copier" onclick="copyToClipboard(document.getElementById('ider').innerHTML)">Copy code</button><?php echo"</div>";?>
+<span><a id="copier" onclick="copyToClipboard(document.getElementById('ider').innerHTML)"><img id='copierimg' src='assets/img/clipboard.png'/></a></span><?php echo"</div>";?>
 <table class="fader2" cellpadding="10" cellspacing="2">
 <tr>
 <td id='td10'>10</td>
@@ -65,9 +66,9 @@ echo "<div id='hideMe'><span id='ider'>".$_SESSION['insecure_code']."</span>"; ?
 <td id='td1'>1</td>
 </tr>
 </table><?php echo "
-<p>make sure to keep it safe, as it is not hashed or encrypted at the moment.</p>
-<p>Don't have our js in your login form yet? copy the code from <a href='logincode.php'>here</a></p>";
-echo "<p>You may want to <a href='settings.php'/>setup your pgp public key</a> to secure this key against intruders and ensure your no one can break in.";
+<p>Make sure to keep it safe, as it is not hashed or encrypted at the moment.</p>
+<p>Don't have our js in your login form yet? <a href='logincode.php'>copy the code</a></p>";
+echo "<p>You may want to <a href='settings.php'/>set up your pgp public key</a> to secure this key against intruders.";
 ?>
 	</div>
 <div>
