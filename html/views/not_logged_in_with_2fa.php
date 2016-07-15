@@ -3,12 +3,12 @@
 if (isset($login)) {
     if ($login->errors) {
         foreach ($login->errors as $error) {
-            echo $error;
+            echo "<div id='hideMeFast'><span class='center red'>$error</span></div>";
         }
     }
     if ($login->messages) {
         foreach ($login->messages as $message) {
-            echo $message;
+            echo "<div id='hideMeFast'><span class='center red'>$message</span></div>";
         }
     }
 }
@@ -17,13 +17,13 @@ if (isset($login)) {
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="apple-mobile-web-app-capable" content="yes" />
-	<link rel="icon" href="assets/img/2fa.ico" />
-	 <link rel="stylesheet" type="text/css" href="assets/css/font.css">
+	<link rel="icon" href="../assets/img/2fa.ico" />
+	 <link rel="stylesheet" type="text/css" href="../assets/css/font.css">
 	<link rel="apple-touch-icon" href="assets/img/apple-touch-icon-precomposed.png" />
 	<link rel="apple-touch-startup-image" href="assets/img/aaple-touch-startup-image.png" />
 	<meta name="apple-mobile-web-app-title" content="2FA Party"> <!-- iOS -->
 	<meta name="application-name" content="2FA Party"> <!-- android -->
-	<LINK REL=StyleSheet HREF="assets/css/style.css" TYPE="text/css" MEDIA=screen>
+	<LINK REL=StyleSheet HREF="../assets/css/style.css" TYPE="text/css" MEDIA=screen>
 	<script type="text/javascript">
 		(function(document,navigator,standalone) {
 			// prevents links from apps from oppening in mobile safari
@@ -53,7 +53,7 @@ if (isset($login)) {
 </head>
 <body>
 	<div>
-		<h1 class='titler'>Welcome to 2fa.party</h1>
+		<h1 class='titler'>Welcome to 2fa.party DEMO LOGIN</h1>
 		<!-- login form box -->
 		<form method="post" action="index.php" name="loginform">
 <ul>
@@ -65,13 +65,17 @@ if (isset($login)) {
 		    <label for="login_input_password">Password</label><br>
 		    <input id="login_input_password" class="login_input" type="password" name="user_password" autocomplete="off" required />
 	</li>
+	<li>
+		    <label class='twofa' for="login_input_password">2fa.party key</label><br>
+		    <input id="login_input_2fa" class="login_input twofa" type="password" name="user_2fa" autocomplete="off" required />
+	</li>
 
 		    <input type="submit"  name="login" value="Log in" />
-
+</ul>
 		</form>
 	</div>
 <div>
-	<a class='center' href="index.php">Home</a>
+	<a class='center' href="/index.php">Home</a>
 	<a class='center' href="about.php">About</a>
 	<?php if (ISSET($_SESSION['user_login_status'])) {
 		echo "<a class='center blue' href='settings.php'>Settings</a>";
@@ -79,7 +83,7 @@ if (isset($login)) {
 		}
 		else {
 			echo "<a class='center blue' href='register.php'>Register new account</a>";
-			echo "<a class='serious' href='demo-login/index.php'>Demo 2fa login form</a>";
+			echo "<a class='serious' href='../demo-login/index.php'>Demo 2fa login form</a>";
 			}?>
 </div>
 </body>

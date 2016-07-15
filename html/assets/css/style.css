@@ -143,6 +143,11 @@ h1.titler {
 	color: #fffaff;
 }
 
+.red {
+	background-color: #f00013;
+	color: white;
+	font-weight: bold;
+}
 
 div {
 width: auto;
@@ -212,6 +217,21 @@ ul, li {
     animation-fill-mode: forwards;
 }
 
+#hideMeFast {
+	-webkit-transition-timing-function: ease-in-out;
+	transition-timing-function: ease-in-out;
+	background-color: white;
+    -moz-animation: cssAnimation 0s ease-in-out 2s forwards;
+    /* Firefox */
+    -webkit-animation: cssAnimation 0s ease-in-out 2s forwards;
+    /* Safari and Chrome */
+    -o-animation: cssAnimation 0s ease-in-out 2s forwards;
+    /* Opera */
+    animation: cssAnimation 0s ease-in-out 2s forwards;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
 #ider {
 	font-family: sans-serif;
 	color: #0055a0;
@@ -221,6 +241,21 @@ ul, li {
 	margin-left: 0;
 	margin-right: 0;
 	text-align: center;
+}
+/* show gen again button only after hideMe hides after 10 seconds */
+#genAgain {
+		-webkit-transition-timing-function: linear;
+	transition-timing-function: linear;
+	background-color: #f4f4f4;
+    -moz-animation: showgen 10s linear 0s forwards;
+    /* Firefox */
+    -webkit-animation: showgen 10s linear 0s forwards;
+    /* Safari and Chrome */
+    -o-animation: showgen 10s linear 0s forwards;
+    /* Opera */
+    animation: showgen 10s linear 0s forwards;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
 }
 
 #ider a {
@@ -271,6 +306,36 @@ ul, li {
     }
 }
 
+@keyframes showgen {
+	from {
+    width:0;
+    height:0;
+    overflow:hidden;
+  }
+    to {
+        width:auto;
+        height:auto;
+        overflow:auto;
+    }
+}
+@-webkit-keyframes showgen {
+		from {
+    width:0;
+    height:0;
+    visibility:hidden;
+  }
+    to {
+        width:auto;
+        height:auto;
+        visibility:visible;
+
+    }
+}
+
+.twofa {
+	background-color: yellow;
+	font-weight:bold;
+}
 
 @media only screen and (max-device-width: 480px) {
 body {
@@ -304,6 +369,9 @@ div {
    width: 80%;
    font-family: InputMono, monospace;
  }
+ 
+
+
 input[type=submit] {
 	display: inline-block;
 	margin-left: 0;
@@ -338,5 +406,4 @@ input[type=submit] {
 	overflow: auto;
 	margin-left:0;
 }
-
 }

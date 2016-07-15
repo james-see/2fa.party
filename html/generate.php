@@ -51,7 +51,7 @@
 $pgp = new pgp_2fa();
 $pgp->generateSecret();
 echo "<div id='hideMe'><span id='ider'>".$_SESSION['insecure_code']."</span>"; ?>
-<span><a id="copier" onclick="copyToClipboard(document.getElementById('ider').innerHTML)"><img id='copierimg' src='assets/img/clipboard.png'/></a></span><?php echo"</div>";?>
+<span><a id="copier" onclick="copyToClipboard(document.getElementById('ider').innerHTML)"><img id='copierimg' src='assets/img/clipboard.png'/></a></span><?php echo"</div><div id='genAgain'><a href='generate.php'>generate again...</a></div>";?>
 <table class="fader2" cellpadding="10" cellspacing="2">
 <tr>
 <td id='td10'>10</td>
